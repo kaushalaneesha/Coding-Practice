@@ -1,5 +1,5 @@
 """
-Alternate high low
+15. Alternate high low
 https://www.techiedelight.com/rearrange-the-array-with-alternate-high-and-low-elements/
 """
 from typing import List

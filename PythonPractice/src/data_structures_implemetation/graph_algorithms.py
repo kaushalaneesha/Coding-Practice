@@ -10,8 +10,8 @@ class Graph:
     def __init__(self):
         self.vertices = collections.defaultdict(list)
 
-    def add_edge(self, u, v, w):
-        self.vertices[u].append()
+    def add_edge(self, u, v):
+        self.vertices[u].append(v)
 
     def breadth_first_search(self, source: int):
         """
@@ -76,6 +76,7 @@ def depth_first_search_util(g: Graph, vertex: int, visited: Set[int], res: List[
     res.append(vertex)
     visited.add(vertex)
 
+
 g = Graph()
 g.add_edge(1, 2)
 g.add_edge(2, 3)
@@ -88,3 +89,12 @@ g.breadth_first_search(1)
 print("-------------------------------")
 print(g.depth_first_search(1))
 print(g.topological_sort(1))
+
+
+g = Graph()
+g.add_edge(1, 2)
+g.add_edge(1, 4)
+g.add_edge(4, 3)
+g.add_edge(2, 3)
+print(g.vertices)
+g.breadth_first_search(1)
